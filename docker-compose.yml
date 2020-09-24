@@ -1,0 +1,9 @@
+version: "3"
+services:
+  broker:
+    image: xaptum-occupancy-demo-broker
+  dashboard:
+    image: xaptum-occupancy-demo-dashboard
+    ports:
+      - "8050:8050"
+    command: -b broker:1883
