@@ -188,7 +188,9 @@ class Protocol(object):
         self.start()
 
     def start(self):
-        self._client.connect_async(self._broker)
+        host, port = self._broker.rsplit(':', 1)
+        print("connecting to", host, port)
+        self._client.connect_async(host, port=int(port))
         self._client.loop_start()
 
     def on_connect(self, client, userdata, flags, rc):
