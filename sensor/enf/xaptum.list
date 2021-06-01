@@ -1,1 +1,1 @@
-deb http://dl.bintray.com/xaptum/deb stretch main
+deb https://xaptum.jfrog.io/artifactory/debian buster main
